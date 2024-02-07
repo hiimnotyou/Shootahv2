@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launcher</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-image: url('bg.svg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #play-button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #game-iframe {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="play-button" onclick="launchGame()">Play</button>
+  <iframe id="game-iframe" src="game.html"></iframe>
+
+  <script>
+    function launchGame() {
+      document.getElementById('play-button').style.display = 'none';
+      document.getElementById('game-iframe').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
